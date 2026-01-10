@@ -203,14 +203,6 @@ class CommercioApp {
         document.getElementById('product-description').textContent = product.description;
         document.getElementById('real-price').textContent = `${product.price}$`;
         
-        // Render variant images
-        const variantContainer = document.getElementById('variant-images');
-        variantContainer.innerHTML = product.variants.map((variant, index) => `
-            <img src="${variant}" alt="Variant ${index + 1}" 
-                 class="variant-image ${index === 0 ? 'active' : ''}"
-                 onclick="app.selectVariant(${index})">
-        `).join('');
-        
         // Render size options
         const sizeContainer = document.getElementById('size-options');
         sizeContainer.innerHTML = product.sizes.map((size, index) => `
