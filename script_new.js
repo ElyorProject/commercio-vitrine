@@ -268,6 +268,11 @@ class CommercioApp {
         }
     }
 
+    checkAvailability() {
+        alert('Откройте Телеграм Бот и вставьте артикул');
+        window.open('https://t.me/cdesignbot', '_blank');
+    }
+
     showView(viewName) {
         console.log('Switching to view:', viewName);
         document.querySelectorAll('.view').forEach(view => {
