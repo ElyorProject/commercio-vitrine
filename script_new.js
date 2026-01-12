@@ -251,8 +251,7 @@ class CommercioApp {
 
     copyProductInfo() {
         if (this.selectedProduct) {
-            const selectedSize = document.querySelector('.size-option.active')?.textContent || 'Не выбран';
-            const productInfo = `${this.selectedProduct.article} - ${selectedSize}`;
+            const productInfo = this.selectedProduct.article;
             
             const btn = document.querySelector('.copy-btn');
             navigator.clipboard.writeText(productInfo).then(() => {
